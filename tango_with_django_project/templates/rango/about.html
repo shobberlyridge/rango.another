@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	
+{% load staticfiles %}	
+	
+    <head>
+        <title>Rango</title>
+    </head>
+    
+    <body>
+        <h1>Rango says...</h1>
+        <div>
+            <strong>{{ aboutmessage }}</strong>
+        </div>
+        <div>
+			<br>This tutorial has been put together by Me!<br />
+			<a href="/">Index</a><br />
+            <img src="{% static "images/cat.jpg" %}"
+                 alt="Picture of static Cat" /> <!-- New line -->
+             <img src="{{ MEDIA_URL }}cat.jpg" %}"
+                 alt="Picture of media Cat" /> <!-- New line -->
+        </div>
+    </body>
+</html>
