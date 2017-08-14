@@ -25,6 +25,18 @@
 		{% endif %}
 		</div>
         
+        <h2>Top Five Pages</h2>
+        {% if pages %}
+        <ul>
+            {% for page in pages %}
+            <li><a href="{{ page.url}}">{{ page.title }}</a> - {{ page.category}} ({{ page.views }} view(s))</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <strong>No pages at present.</strong>
+        {% endif %}
+
+</div>
         <div>
             <a href="/rango/about/">About</a><br />
             <img src="{% static "images/rango.jpg" %}"
